@@ -7,10 +7,10 @@ from examples.assets import inheritance
 def assert_results(
     actual_salary: decimal,
     expected_salary: decimal,
-    actual_post_tax: decimal,
-    expected_post_tax: decimal,
-    actual_weekly: decimal,
-    expected_weekly: decimal,
+    actual_post_tax: float,
+    expected_post_tax: float,
+    actual_weekly: float,
+    expected_weekly: float,
     test_name: str,
 ) -> None:
     """
@@ -66,11 +66,11 @@ def scenario1() -> None:
 
     base_salary: decimal = employee.salary if hasattr(employee, "salary") else 0
     taxed_income: decimal = employee.calculate_post_tax()
-    weekly_taxed_income: decimal = employee.calculate_post_tax_weekly()
+    weekly_taxed_income: float = employee.calculate_post_tax_weekly()
 
     # Expected Values:
     expected_salary: decimal = 50000
-    expected_taxed_income: decimal = 41980
+    expected_taxed_income: decimal = 41980.00
     expected_weekly_taxed_income = 807.31
 
     assert_results(
