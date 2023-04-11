@@ -5,6 +5,7 @@ from examples.assets import validation
 
 def scenario1() -> None:
     """Valid withdrawal"""
+    print("Scenario 1")
     bank_value: decimal = 10000
     person = validation.Person(bank_value)
     result = person.withdraw(bank_value)
@@ -15,6 +16,7 @@ def scenario1() -> None:
 
 def scenario2() -> None:
     """Invalid withdrawal"""
+    print("Scenario 2")
     bank_value: decimal = 10000
     person = validation.Person(bank_value)
     try:
@@ -28,6 +30,7 @@ def scenario2() -> None:
 
 def scenario3() -> None:
     """Invalid withdrawal"""
+    print("Scenario 3")
     bank_value: decimal = 10000
     person = validation.Person(bank_value)
     try:

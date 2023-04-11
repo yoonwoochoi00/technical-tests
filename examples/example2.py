@@ -26,7 +26,7 @@ def assert_results(
         has_issue = True
 
     try:
-        assert len(result1) == len(result2), "Length of values is unexpected"
+        assert len(result1) == len(result2), "Number of values is unexpected"
     except AssertionError as error:
         print(error)
         print(traceback.print_exc())
@@ -51,6 +51,7 @@ def scenario1():
 
 
 def scenario2():
+    """Checks adding an invalid value"""
     test_class = performance.PerformanceTests()
     exec_time1, result1 = test_class.add(41454)
     test_class.reset()

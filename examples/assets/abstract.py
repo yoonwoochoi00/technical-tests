@@ -20,13 +20,16 @@ class A:
         if not self.x:
             self.x = c
         elif self.x != c:
-            raise Exception()
+            raise Exception("A different user is using this system.")
 
     def _c(self):
         if self.x:
             self.x = ""
 
     def d(self, e, f):
+        if not e:
+            raise Exception("Message has no contents")
+
         self._b(f)
 
         print(f"{self.x} - {e}")

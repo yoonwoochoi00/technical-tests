@@ -25,7 +25,15 @@ def run():
     # If it does not, why not?
     """
     print("EXAMPLE 1".center(80))
+
+    # Scenario 1
     add_example(1)
+
+    # Scenario 2
     add_example("a")
+
+    # Scenario 3
     add_example(2)
+
+    # Scenario 4
     add_example(33)
