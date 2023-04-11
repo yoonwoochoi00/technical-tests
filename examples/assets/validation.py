@@ -9,6 +9,9 @@ class ValidationException(Exception):
 
         self.message = message
 
+    def __str__(self) -> str:
+        return self.message
+
 
 class Person:
     """
@@ -21,7 +24,7 @@ class Person:
     """
 
     def __init__(self, amount: decimal = 0) -> None:
-        self.amount = 0
+        self.amount = amount
         self.overdraft = 1000
 
     def _withdraw_validations(self, amount_to_withdraw: decimal) -> bool:

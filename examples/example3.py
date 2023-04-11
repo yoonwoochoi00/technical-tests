@@ -66,20 +66,20 @@ def scenario1() -> None:
 
     base_salary: decimal = employee.salary if hasattr(employee, "salary") else 0
     taxed_income: decimal = employee.calculate_post_tax()
-    weekly_income: decimal = employee.calculate_post_tax()
+    weekly_taxed_income: decimal = employee.calculate_post_tax()
 
     # Expected Values:
     expected_salary: decimal = 50000
-    expected_taxed_income: decimal = 38980.0
-    expected_weekly_income = 749.62
+    expected_taxed_income: decimal = 41980
+    expected_weekly_taxed_income = 807.31
 
     assert_results(
         base_salary,
         expected_salary,
         taxed_income,
         expected_taxed_income,
-        weekly_income,
-        expected_weekly_income,
+        weekly_taxed_income,
+        expected_weekly_taxed_income,
         "Scenario 1",
     )
 

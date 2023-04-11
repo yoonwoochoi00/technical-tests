@@ -31,4 +31,4 @@ class Employee(Person):
         # Apply Tax rates (10.5, 17.5, 30, 33, 39)
         # https://tinyurl.com/y34xm2tv
         # TODO: Calculate the tax obligation of a worker from their salary
-        pass
+        # Use the tax brackets provided in the above link
