@@ -128,12 +128,14 @@ The main difference between `add()` and `add2()` is that `add()` accesses all va
 
 - Changed method name from `calculate_weekly()` to `calculate_post_tax_weekly()` for clarity.
 - Fixed data type for after tax values from `int` to `float`, as they are rounded to the nearest cent.
-- Changed variables in Person to private.
 - Placed `calculate_post_tax()` before `calculate_post_tax_weekly()`, as `calculate_post_tax_weekly()` class `calculate_post_tax()`.
-- Updated test cases to correctly check the expected and actual values.
 
 ---
 
 <br>
 
 ## Example 4 - Validation
+
+### Extra
+
+- Removed unused variables created to withdraw.

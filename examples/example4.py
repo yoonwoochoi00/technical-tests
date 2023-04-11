@@ -12,6 +12,8 @@ def scenario1() -> None:
 
     expected_result: decimal = 0
     assert result == expected_result, "The withdrawal logic seems incorrect"
+    print("Pass - Valid withdrawal made")
+    print()
 
 
 def scenario2() -> None:
@@ -24,7 +26,7 @@ def scenario2() -> None:
     except validation.ValidationException:
         print("Pass - Valid exception raised")
     except Exception:
-        print("Failed - Unexpected exception raised.")
+        print("Failed - Unexpected exception raised")
     print()
 
 
@@ -38,7 +40,7 @@ def scenario3() -> None:
     except validation.ValidationException:
         print("Pass - Valid exception raised")
     except Exception:
-        print("Failed - Unexpected exception raised.")
+        print("Failed - Unexpected exception raised")
     print()
 
 

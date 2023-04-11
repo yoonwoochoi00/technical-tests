@@ -49,8 +49,6 @@ class Person:
         elif amount_to_withdraw > self.amount + self.overdraft:
             raise ValidationException("You may not withdraw more than {} dollars.".format(str(self.amount + self.overdraft)))
 
-
-
     def withdraw(self, amount_to_withdraw: decimal) -> decimal:
         """
         Withdraw an amount from this account.
