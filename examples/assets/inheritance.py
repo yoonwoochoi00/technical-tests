@@ -13,7 +13,8 @@ class Employee(Person):
     def __init__(self, name: str, age: int, salary: decimal) -> None:
         # TODO: Call base class and instantiate attributes.
         # TODO: Salary is the annual amount paid to an employee
-        pass
+        super.__init__(name, age)
+        self._salary = salary
 
     def calculate_post_tax_weekly(self) -> decimal:
         """
