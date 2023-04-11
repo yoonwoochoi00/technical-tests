@@ -41,7 +41,7 @@ class PerformanceTests:
         Write your own method for adding a value as efficiently as possible.
 
         Args:
-            value_to_add (int): _description_
+            value_to_add (int): The value to add
         """
         start = time.time()
 
