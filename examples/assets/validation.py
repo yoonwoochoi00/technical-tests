@@ -21,7 +21,7 @@ class Person:
     """
 
     def __init__(self, amount: decimal = 0) -> None:
-        self.amount = 0
+        self.amount = amount
         self.overdraft = 1000
 
     def _withdraw_validations(self, amount_to_withdraw: decimal) -> bool:
