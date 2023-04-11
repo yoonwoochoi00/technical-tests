@@ -20,7 +20,7 @@ def scenario2() -> None:
     bank_value: decimal = 10000
     person = validation.Person(bank_value)
     try:
-        _ = person.withdraw(bank_value + 2000)
+        person.withdraw(bank_value + 2000)
     except validation.ValidationException:
         print("Pass - Valid exception raised")
     except Exception:
