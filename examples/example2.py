@@ -41,7 +41,7 @@ def assert_results(
 
 
 def scenario1():
-    """Checks adding a valid value"""
+    """Checks adding an invalid value"""
     test_class = performance.PerformanceTests()
     exec_time1, result1 = test_class.add(41)
     test_class.reset()
@@ -51,7 +51,7 @@ def scenario1():
 
 
 def scenario2():
-    """Checks adding an invalid value"""
+    """Checks adding a valid value"""
     test_class = performance.PerformanceTests()
     exec_time1, result1 = test_class.add(41454)
     test_class.reset()
