@@ -1,5 +1,54 @@
 # Answers by Yunu Choi
 
-## Example - Stack Tree
+Included is answers to the examples described in `README.md`, written by Yunu Choi. Please contact Yunu via yoonwoochoi00@gmail.com for further explanations.
+
+<br>
+
+## Example 1 - Stack Tree
 
 ### Scenario 1
+
+```
+add_example(1)
+```
+
+The literal `1` is **valid** and results in printing `Added 1 successfully` because it is of type `int`, not even, and not `33`, which passes all checks.
+
+<br>
+
+### Scenario 2
+
+```
+add_example("a")
+```
+
+The literal `"a"` is **not valid** because is not of type `int`, but is of type `string`. Other checks including `_check_even()` and `_check_is_not_33()` are not executed because the check `_check_type()` is called before these checks, and raises a `ValueError` which ends the execution.
+
+<br>
+
+### Scenario 3
+
+```
+add_example(2)
+```
+
+The literal `2` is **not valid** because even though it is of type `int`, but is even. It passes the check `_check_type()`, but encounters an error in `_check_even()`, which prevents it from executing the next check, `_check_is_not_33()`.
+
+<br>
+
+### Scenario 4
+
+```
+add_example(33)
+```
+
+The literal `33` is **not valid** because even though it is of type `int` and not even, it fails in the check `_check_is_not_33()`.
+
+<br>
+
+### Extra
+
+- Updated error message for `_check_even()`, from `"The value to add may not be even"` to `"The value to add is not even"` to make the error message consistent to error messages from other checks.
+- Updated structure for `_check_is_not_33()` to not create an additional variable to store the error message, so it follows the structure of other checks.
+
+---
