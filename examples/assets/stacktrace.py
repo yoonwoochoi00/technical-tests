@@ -40,5 +40,4 @@ class ErrorTracing:
 
     def _check_is_not_33(self, value_to_validate: int):
         if value_to_validate == 33:
-            bad_error_message = "The letter being validated is invalid."
-            raise (ValueError(bad_error_message))
+            raise (ValueError("The value to add is 33."))
