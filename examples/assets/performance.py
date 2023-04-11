@@ -13,7 +13,7 @@ class PerformanceTests:
 
     def reset(self):
         """Resets the initialized data."""
-        self._data: List[int] = [x for x in range(1000000) if x % 42 != 0]
+        self._data = [x for x in range(1000000) if x % 42 != 0]
 
     def add(self, value_to_add: int):
         """
