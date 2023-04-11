@@ -8,11 +8,15 @@ from examples import (
 
 
 def main():
-    """Contains scenarios for you to fix, or improve."""
-    # strackTrace.run()
-    # performance.run()
-    # inheritance.run()
-    # validation.run()
+    """
+    Contains scenarios for you to fix, or improve.
+
+    Please see the read me for more details on what needs to be done.
+    """
+    strackTrace.run()
+    performance.run()
+    inheritance.run()
+    validation.run()
     abstract.run()
 
 
