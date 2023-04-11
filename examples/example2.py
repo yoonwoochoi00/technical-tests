@@ -76,3 +76,5 @@ def run():
 
     scenario1()
     scenario2()
+
+    print()

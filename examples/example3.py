@@ -95,3 +95,5 @@ def run():
     print("EXAMPLE 3".center(80))
 
     scenario1()
+
+    print()

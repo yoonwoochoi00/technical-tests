@@ -12,7 +12,7 @@ def scenario1() -> None:
 
     expected_result: decimal = 0
     assert result == expected_result, "The withdrawal logic seems incorrect"
-    print("Pass - Valid withdrawal made")
+    print("Passed - Valid withdrawal made")
     print()
 
 
@@ -24,7 +24,7 @@ def scenario2() -> None:
     try:
         person.withdraw(bank_value + 2000)
     except validation.ValidationException:
-        print("Pass - Valid exception raised")
+        print("Passed - Valid exception raised")
     except Exception:
         print("Failed - Unexpected exception raised")
     print()
@@ -38,7 +38,7 @@ def scenario3() -> None:
     try:
         person.withdraw(-1)
     except validation.ValidationException:
-        print("Pass - Valid exception raised")
+        print("Passed - Valid exception raised")
     except Exception:
         print("Failed - Unexpected exception raised")
     print()
@@ -59,3 +59,5 @@ def run():
     scenario1()
     scenario2()
     scenario3()
+
+    print()
