@@ -18,7 +18,7 @@ class Employee(Person):
         # TODO: Salary is the annual amount paid to an employee
         pass
 
-    def calculate_weekly(self) -> decimal:
+    def calculate_post_tax_weekly(self) -> decimal:
         """
         Calculate the weekly payment to a worker after taxes."""
         # TODO: Calculate weekly payment to a worker after taxes applied.
