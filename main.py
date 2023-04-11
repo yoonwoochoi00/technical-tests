@@ -13,10 +13,10 @@ def main():
 
     Please see the read me for more details on what needs to be done.
     """
-    #strackTrace.run()
-    #performance.run()
-    #inheritance.run()
-    #validation.run()
+    strackTrace.run()
+    performance.run()
+    inheritance.run()
+    validation.run()
     abstract.run()
 
 

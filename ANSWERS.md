@@ -138,4 +138,11 @@ The main difference between `add()` and `add2()` is that `add()` accesses all va
 
 ### Extra
 
-- Removed unused variables created to withdraw.
+- Removed unused variables created for withdrawals.
+- Added success message when test is passed.
+
+---
+
+<br>
+
+## Example 5 - Abstract

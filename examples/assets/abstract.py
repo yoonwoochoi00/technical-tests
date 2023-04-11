@@ -1,37 +1,53 @@
-class A:
+class LoginException(Exception):
+    """An exception to be thrown when a login fails."""
+
+    def __init__(self, message: str) -> None:
+        super().__init__()
+
+        self.message = message
+
+    def __str__(self) -> str:
+        return self.message
+
+class MessageException(Exception):
+    """An exception to be thrown when leaving a message fails."""
+
+    def __init__(self, message: str) -> None:
+        super().__init__()
+
+        self.message = message
+
+    def __str__(self) -> str:
+        return self.message
+
+class System:
     """
-    Something, something talking stick?
-
-    Document Me!
-
-    Give the class, its attributes, methods and arguments better names.
-
-    Please note, _x() are denoted because they are internal methods and would not
-    expected to be called outside of the class.
+    A representation of a system that users can leave a message
 
     Raises:
-        Exception: Document Me
+        LoginException: When another is user is using the system.
+        MessageException: When the message has no contents.
     """
 
     # Give attributes better names
-    x = ""
+    current_user = ""
 
-    def _b(self, c):
-        if not self.x:
-            self.x = c
-        elif self.x != c:
-            raise Exception("A different user is using this system.")
+    def _login(self, new_user):
+        if not self.current_user:
+            self.current_user = new_user
+        elif self.current_user != new_user:
+            raise LoginException("A different user is using this system.")
 
-    def _c(self):
-        if self.x:
-            self.x = ""
+    def _logout(self):
+        if self.current_user:
+            self.current_user = ""
 
-    def d(self, e, f):
-        if not e:
-            raise Exception("Message has no contents")
+    def leave_message(self, content, username):
+        if not content:
+            raise MessageException("Message has no contents")
 
-        self._b(f)
+        self._login(username)
 
-        print(f"{self.x} - {e}")
+        print(f"{self.current_user} - {content}")
 
-        self._c()
+        self._logout()

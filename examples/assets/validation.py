@@ -2,7 +2,7 @@ import decimal
 
 
 class ValidationException(Exception):
-    """A exception to be thrown when a validation fails."""
+    """An exception to be thrown when a validation fails."""
 
     def __init__(self, message: str) -> None:
         super().__init__()
