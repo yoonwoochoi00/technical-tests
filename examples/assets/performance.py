@@ -17,7 +17,7 @@ class PerformanceTests:
 
     def add(self, value_to_add: int):
         """
-        Ineffience way of adding values to a collection.
+        Ineffient way of adding values to a collection.
 
         Args:
             value_to_add (int): The value to add
