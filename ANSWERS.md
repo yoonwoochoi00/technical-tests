@@ -159,3 +159,16 @@ I have named the class `System` as it allows users to leave a message and the wo
 <br>
 
 There are two kinds of custom exceptions used in `Class` - `LoginException` and `MessageException`. A `LoginException` is thrown when another is already using the system when a user tries to call the `_login()` method. A `MessageException` is thrown when the `content` parameter passed to `leave_message` has no content, in other words, an empty string (`""`) or `None`.
+
+---
+
+<br>
+
+<div style="text-align: right"> 
+    Date completed: 11/04/2023
+    <br>
+    <br>
+    Yunu Choi
+    <br>
+    yoonwoochoi00@gmail.com
+</div>
