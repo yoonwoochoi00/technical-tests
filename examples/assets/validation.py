@@ -43,7 +43,13 @@ class Person:
             error_message = "You may not withdraw more than 10 dollars."
             raise ValidationException(error_message)
         """
-        pass
+        if amount_to_withdraw < 0:
+            raise ValidationException("Amount to withdraw cannot be negative.")
+        
+        elif amount_to_withdraw > self.amount + self.overdraft:
+            raise ValidationException("You may not withdraw more than {} dollars.".format(str(self.amount + self.overdraft)))
+
+
 
     def withdraw(self, amount_to_withdraw: decimal) -> decimal:
         """
@@ -54,7 +60,6 @@ class Person:
         """
 
         self._withdraw_validations(amount_to_withdraw)
-
         self.amount -= amount_to_withdraw
 
         return self.amount

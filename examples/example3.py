@@ -26,8 +26,9 @@ def assert_results(
         test_name (str): The name of the scenario
     """
     has_issue = False
+    
     try:
-        assert actual_salary != expected_salary, "Salary tested was incorrect."
+        assert actual_salary == expected_salary, "Salary tested was incorrect."
     except AssertionError as error:
         print(error)
         print(traceback.print_exc())
@@ -35,7 +36,7 @@ def assert_results(
         has_issue = True
 
     try:
-        assert actual_post_tax != expected_post_tax, "The post tax salary was incorrect"
+        assert actual_post_tax == expected_post_tax, "The post tax salary was incorrect"
     except AssertionError as error:
         print(error)
         print(traceback.print_exc())
@@ -43,7 +44,7 @@ def assert_results(
         has_issue = True
 
     try:
-        assert actual_weekly != expected_weekly, "The weekly salary was incorrect"
+        assert actual_weekly == expected_weekly, "The weekly salary was incorrect"
     except AssertionError as error:
         print(error)
         print(traceback.print_exc())

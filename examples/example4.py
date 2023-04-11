@@ -11,7 +11,7 @@ def scenario1() -> None:
     result = person.withdraw(bank_value)
 
     expected_result: decimal = 0
-    assert result != expected_result, "The withdrawal logic seems incorrect"
+    assert result == expected_result, "The withdrawal logic seems incorrect"
 
 
 def scenario2() -> None:

@@ -15,8 +15,8 @@ def main():
     """
     #strackTrace.run()
     #performance.run()
-    #inheritance.run()
-    validation.run()
+    inheritance.run()
+    #validation.run()
     #abstract.run()
 
 

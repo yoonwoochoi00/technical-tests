@@ -2,19 +2,24 @@ import decimal
 
 
 class Person:
+    name: str = ""
+    age: int = int
+
     def __init__(self, name: str, age: int) -> None:
-        self._name = name
-        self._age = age
+        self.name = name
+        self.age = age
 
 
 class Employee(Person):
     # TODO
+    salary: int = int
 
     def __init__(self, name: str, age: int, salary: decimal) -> None:
         # TODO: Call base class and instantiate attributes.
         # TODO: Salary is the annual amount paid to an employee
         super().__init__(name, age)
-        self._salary = salary
+        self.salary = salary
+        self.salary_post_tax = None
 
     def calculate_post_tax(self) -> float:
         """Calculate the tax obligation of an employee."""
@@ -24,22 +29,26 @@ class Employee(Person):
         # Use the tax brackets provided in the above link
         tax_rate = None
 
-        if self._salary >= 14000:
-            tax_rate = 10.5
+        if self.salary <= 14000:
+            self.salary_post_tax = self.salary - (self.salary * 10.5 / 100)
 
-        elif self.salary >= 48000:
-            tax_rate = 17.5
+        elif self.salary <= 48000:
+            salary_below_bracket = self.salary - 14000
+            self.salary_post_tax = self.salary - (1470 + (salary_below_bracket * 17.5 / 100))
 
-        elif self.salary >= 70000:
-            tax_rate = 30
+        elif self.salary <= 70000:
+            salary_below_bracket = self.salary - 48000
+            self.salary_post_tax = self.salary - (7420 + (salary_below_bracket * 30 / 100))
 
-        elif self.salary >= 180000:
-            tax_rate = 33
+        elif self.salary <= 180000:
+            salary_below_bracket = self.salary - 70000
+            self.salary_post_tax = self.salary - (14020 + (salary_below_bracket * 33 / 100))
 
         else:
-            tax_rate = 39
+            salary_below_bracket = self.salary - 180000
+            self.salary_post_tax = self.salary - (50320 + (salary_below_bracket * 39 / 100))
 
-        return round(self._salary - self._salary * tax_rate, 2)
+        return round(self.salary_post_tax, 2)
 
 
     def calculate_post_tax_weekly(self) -> float:
@@ -50,4 +59,4 @@ class Employee(Person):
         # Please round to the nearest cent.
         salary = self.calculate_post_tax()
 
-        return round(salary / 52)
+        return round(salary / 52, 2)
