@@ -9,6 +9,9 @@ class ValidationException(Exception):
 
         self.message = message
 
+    def __str__(self) -> str:
+        return self.message
+
 
 class Person:
     """
