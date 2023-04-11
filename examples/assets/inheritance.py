@@ -2,12 +2,9 @@ import decimal
 
 
 class Person:
-    name: str = ""
-    age: int = int
-
     def __init__(self, name: str, age: int) -> None:
-        self.name = name
-        self.age = age
+        self._name = name
+        self._age = age
 
 
 class Employee(Person):
