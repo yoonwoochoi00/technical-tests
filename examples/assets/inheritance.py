@@ -16,6 +16,13 @@ class Employee(Person):
         super.__init__(name, age)
         self._salary = salary
 
+    def calculate_post_tax(self) -> decimal:
+        """Calculate the tax obligation of an employee."""
+        # Apply Tax rates (10.5, 17.5, 30, 33, 39)
+        # https://tinyurl.com/y34xm2tv
+        # TODO: Calculate the tax obligation of a worker from their salary
+        # Use the tax brackets provided in the above link
+
     def calculate_post_tax_weekly(self) -> decimal:
         """
         Calculate the weekly payment to a worker after taxes."""
@@ -23,10 +30,3 @@ class Employee(Person):
         # For simplicity, please use 52 weeks in a year.
         # Please round to the nearest cent.
         pass
-
-    def calculate_post_tax(self) -> decimal:
-        """Calculate the tax obligation of an employee."""
-        # Apply Tax rates (10.5, 17.5, 30, 33, 39)
-        # https://tinyurl.com/y34xm2tv
-        # TODO: Calculate the tax obligation of a worker from their salary
-        # Use the tax brackets provided in the above link
