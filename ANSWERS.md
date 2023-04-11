@@ -119,3 +119,7 @@ The main difference between `add()` and `add2()` is that `add()` accesses all va
 <br>
 
 ## Example 3 - Inheritance
+
+### Assumptions
+
+- `calculate_post_tax()` returns a rounded value to the nearest cent, same as `calculate_post_tax_weekly()`.
