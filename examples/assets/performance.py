@@ -45,8 +45,8 @@ class PerformanceTests:
         """
         start = time.time()
 
-        # Write custom code here
-        print(value_to_add)
+        # Remove this line and implement your method
+        self.add(value_to_add)
 
         end = time.time()
 

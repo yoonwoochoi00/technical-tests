@@ -18,7 +18,7 @@ def assert_results(
     """
     has_issue = False
     try:
-        assert exec_time1 < exec_time2, "No time improvement"
+        assert exec_time1 > exec_time2, "No time improvement"
     except AssertionError as error:
         print(error)
         print(traceback.print_exc())
